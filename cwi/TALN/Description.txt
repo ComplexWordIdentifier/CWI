@@ -1,0 +1,7 @@
+Team Name: TALN
+
+System 1 Name: RandomForest_SIM
+Description: Each word to classify as complex or not is represented as a feature vector. We consider features including the frequency of both the word and the surrounding ones computed in several corpora, the position of the word in the sentence, the depth of the word in the dependency tree of the sentence, the presence of the word in simple/complex word lists and several measures computed by relying on WordNet and the results of Word Sense Disambiguation applied to sentence. A RandomForrest classifier (100 trees) is trained over the 2237 training set instances so as to decide if a word is complex or not on the bases of its feature vector representation.
+
+System 2 Name: RandomForest_WEI
+Description: The same word representation and classification approaches introduced in the description of the other system we submitted (RandomForest_SIM) are exploited, but in this system (RandomForest_WEI) we weight each training instance by considering the number of human evaluators that has spotted the related word as a complex one.

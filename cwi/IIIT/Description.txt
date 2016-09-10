@@ -1,0 +1,15 @@
+Team Name: IIIT
+System 1 Name: NCC
+Description:
+Our first system relies on 5 features to classify the given word as simple or complex:
+1. Unigram Frequency: We used the Google Books Ngram Viewer to obtain the unigram frequency of the given word.
+2. Length: We considered length of the given word as a feature as longer words may look complex.
+3. Number of senses: A word with higher number of senses is relatively more ambiguous in comparison to a word with lower number of senses. (obtained using Wordnet)
+4. Syllable count: Number of syllables in a word was also considered. This information was obtained from http://www.syllablecount.com/syllables.
+5. CD count: The number of films in which the given word had appeared was obtained from the SUBTLEX corpus.
+
+No additional data was used for training apart from the one provided by the organizers. We used Nearest Centroid Classification technique for the classification using Manhattan distance metric.
+
+System 2: NCC2
+Description:
+System 2 is same as system 1. It differs only in one aspect. The distance metric used in the training algorithm of Nearest Centroid Classification is Seuclidean.

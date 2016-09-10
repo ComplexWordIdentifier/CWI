@@ -1,0 +1,18 @@
+Team Name: CoastalCPH
+
+System 1 Name: NeuralNet
+Description: Extracting a multitude of features (including 
+parts-of-speech, frequencies, character perplexity and embeddings), we 
+train a deep neural network with 2 hidden layers. The single output 
+neuron returns a real value between 0 and 1, and we perform extensive 
+experiments to optimise the prediction threshold for the harmonic mean 
+of recall and accuracy, cross-validating between data splits and testing 
+on the different individual annotations.
+
+System 2 Name: Concatenation
+Description: Extracting a multitude of features (including 
+parts-of-speech, frequencies, character perplexity and embeddings), we 
+train a logistic regression classifier based on the concatenation of all 
+individual votings in the training set, such that every instance is seen 
+20 times during training. We retrieve the probability outputs from the 
+classifier and predict as positive the top decile.

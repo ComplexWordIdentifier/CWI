@@ -1,0 +1,7 @@
+Team Name: ClacEDLK
+System 1 Name: RandomForest-0.5
+Description: Submitted system demonstrate the predictions of a supervised machine learning model (Random Forest) which is trained based on provided training set using five features of frequency in Web 1T corpus, POS tag, number of synonyms each word has (using WordNet for the corresponding POS tag of word in the sentence), inverse of word length and degree of concreteness (abstraction) using MRC Psycholinguistic Database. Several classifiers used; however Random Forest outperformed all. The threshold for class assignment was 0.5 in this system.
+
+
+System 2 Name: RandomForest-0.6
+Description: Submitted system used the same set of features and classifier; however the threshold of 0.6 used for class assignment task. This leads to increasing the accuracy in predicting one class as opposed to decreasing accuracy of detecting the other class.

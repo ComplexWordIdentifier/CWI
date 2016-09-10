@@ -1,0 +1,6 @@
+Title: System Description - CWI SemEval 2016
+Team Name: MAZA
+System 1 Name: A
+Description: Ensemble combination of frequency features.
+System 2 Name: B
+Description: Ensemble combination of frequency and contextual features from the previous and next word.

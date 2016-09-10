@@ -1,0 +1,6 @@
+Title: Using Zipfian and Character-level features for Complex Word Indentification (Tentative title)
+Team Name: MACSAAR
+System 1 Name: RFC
+Description: Uses 2 different types of features (a) Zipfian features and (b) Character ngram features. The Zipfian features includes (i) the percentile ranking of the target word and (ii) the global probability of the target word using (count(w)/sum(count(W)), where w is the target word and W is all possible words in the vocabulary. The character ngram features uses word count proportional similar to our system to idenitify 2nd language learner's error in Zampieri and Tan (2014)\footnote{http://www.dfki.de/~maza02/papers/icce2014.pdf}. We counted the probability sum of all character ngrams within (i) the target word, (ii) the context sentence and (iii) the proportion of the probability sum between the target word and the context sentence. These features were fed into a random forest classiifer with default parameters set by graphlab.
+System 2 Name: NNC
+Description: Similar to system 1's features but with SVM and some parameter tuning.

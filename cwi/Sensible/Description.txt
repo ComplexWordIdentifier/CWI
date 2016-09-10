@@ -1,0 +1,8 @@
+Title (tentative): Neural Nonsense Mangled in Ensemble Mess
+Title (Most probably): Recurrent Neural Net Ensembles for Complex Word Identification 
+Team Name: Sensible
+Team Member: Liling Tan and Nat Gillin
+System 1 Name: Baseline
+Description: Similar to the Quality Estimation system (http://www.cl.uni-heidelberg.de/~riezler/publications/papers/WMT2015.pdf) we set our input layer as a recurrent sequence between the target word, a placeholder \emph{<s>} and the context sentence. We train a long short-term memory neural network with a single embedding layer and a gated-recurrent layer to output a dense sigmoid layer that defines the probability of word complexity. We define the threshold of the positive label as 0.5 and above and negative label otherwise. To determine the optimal no. of nodes for the embedding and GRU layer and the no. of epochs, we ran a cross-validation across the labelled training set and pick the best parameters. And our baseline system was trained using 10 nodes for both the embedding and GRU layer across 10 epochs.
+System 2 Name: Combined
+Description: Instead of using a single neural net to determine the output layer, we selected the top 5 systems from the cross-validation as described above and fed the neural net outputs into an eXtreme gradient boosted ensemble to produce the binary labels for the target words' complexity

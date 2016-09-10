@@ -1,0 +1,6 @@
+Title: System Description - CWI SemEval 2016Team
+Name: Pomona
+System 1 Name: NormalBag
+Description:  Bagged classifier using bootstrap resampling.  The individual classifiers predict complex vs. simple by thresholding the frequency of the word to be classified based on word counts from normal English Wikipedia.  The optimal threshold is selected by brute-force search, optimized for f-score.  The final prediction is a majority vote with ties voting for simple.  A bag size of 10 resamplings was chosen by examining 10-fold cross-validation performance, repeated 20 times.
+System 2 Name: GoogleBag
+Description:  Bagged classifier using bootstrap resampling.  The individual classifiers predict complex vs. simple by thresholding the frequency of the word to be classified based on unigram counts from the Google Web Corpus.  The optimal threshold is selected by brute-force search, optimized for f-score.  The final prediction is a majority vote with ties voting for simple.  A bag size of 10 resamplings was chosen by examining 10-fold cross-validation performance, repeated 20 times.

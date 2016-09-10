@@ -1,0 +1,25 @@
+Dear Gustavo,
+here is the description of our system.
+
+Title: System Description - CWI SemEval 2016
+Team Name: UWB
+System 1 Name: All
+System 2 Name: Agg
+
+Description of systems:
+Both systems are based on a maximum entropy classifier. A lot of 
+features were tested during development, but the final system is very 
+simple. It uses only one feature - document frequency of words in 
+Wikipedia (i.e. this word is in 700 documents out of 10000). The Agg 
+system is trained on the aggregated data and the All system is trained 
+on the annotations from individual annotators.
+
+Our paper will present the all features we have tested and their 
+results. We will discuss why such a simple system works best and also 
+some aspects of the task.
+
+I'm looking forward to see the results and systems of other participants.
+
+Best regards,
+Michal Konkol
+University of West Bohemia

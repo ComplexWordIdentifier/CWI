@@ -1,0 +1,5 @@
+Team Name: PLUJAGH
+System 1 Name: SEWDF
+Description: Task treated as simple classification (not sequence labelling) without context (other words in sentence). It uses one rule: if document frequency over Simple English Wikipedia of word being classified is below some threshold (147) then the word is complex.
+System 2 Name: SEWDFF
+Description: The same system/model, but threshold optimized for F1.

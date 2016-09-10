@@ -1,0 +1,5 @@
+Team Name: HMC
+System 1 Name: DecisionTree25
+Description: For this system, we trained a decision tree with a maximum depth of 4. We labeled each word as "complex" if at least 25% of the first 19 annotators labeled the word difficult, and as "not complex" otherwise, and trained our model to predict the label of the 20th annotator.
+System 2 Name: RegressionTree05
+Description: For this system, we trained a regression tree with a maximum depth of 4. We labeled each word with the percentage of the first 19 annotators who labeled the word as "difficult." During testing, words were labeled "complex" if the model predicted a difficulty of at least 0.05, which corresponds to predicting that one out of twenty annotators would label the word difficult. 

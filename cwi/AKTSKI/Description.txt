@@ -1,0 +1,14 @@
+Team Name: AKTSKI
+System 1 Name: svmbasic
+Description:
+Classifier used -- SVM with class weights
+Features: word length, Wordnet synsets, lemmas, POS, character complexity, neighbor bigrams, word's morphological features,
+                    Word frequency/counts in Brown Corpus and Simple Wiki Corpus
+ 
+ 
+System 2 Name: wsys
+Description:
+Labels were weighted for this system. There are 20 annotators. A word is marked complex if any one of 20 labels is 1. If a certain word has only one or two 1 votes, it is provided less weighted value.
+Classifier: SVM with class weights
+Features: word length, Wordnet synsets, lemmas, POS, character complexity, neighbor bigrams, word's morphological features,
+                    Word frequency/counts in Brown Corpus and Simple Wiki Corpus

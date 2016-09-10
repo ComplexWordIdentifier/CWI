@@ -1,0 +1,6 @@
+Team Name: SV000gg
+System 1: Hard
+Description: Uses Hard Voting to combine 23 distinct systems, including Threshold-Based, Lexicon-Based and Machine Learning approaches. We use a total of 69 distinct morphological, lexical, semantic, collocational and nominal features. Using cross-validation over the training data, we select how many of the top systems we combine.
+
+System 2: Soft
+Description: Identical to the "Hard" system, but instead of Hard Voting, it uses Performance-Oriented Soft Voting, in which the vote of a system is multiplied by its G-score in a held-out portion of the training set.

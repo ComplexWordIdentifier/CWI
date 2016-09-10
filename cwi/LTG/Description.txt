@@ -1,0 +1,5 @@
+Team Name: LTG
+System 1 Name: System1
+Description: Decision Tree using training data with threshold on minimum number of annotators that agree.
+System 2 Name: System2
+Description: Decision Tree using training data with threshold on minimum number of annotators that agree (different thresholds combined).

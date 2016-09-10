@@ -1,0 +1,8 @@
+Team Name AI-KU
+System 1 Name native
+Description 
+We investigated the usage of word embeddings, namely Glove and SCODE, on CWI task. For each annotated word, we used the embedding of the word along with substrings of the word as auxiliary features. We used SVM with rbf kernel as the classifier. 
+
+System 2 Name native1
+Description
+Almost same as native, we used the embeddings of surrounding words to incorporate context information. Again we used SVM with rbf kernel as the classifier. 

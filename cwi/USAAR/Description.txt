@@ -1,0 +1,6 @@
+Title: Complex Word Identification with Word Sense Entropy and Perplexity
+Team Name: USAAR
+System 1 Name: Entropy
+Description: Word Sense Entropy (WSE) is defined as a word difficulty given the no. of possible senses per word. The WSE value is calculated by the sum([h*log(h,2)]*8) given that h is the inverse of the no. of senses per word accounting to the Princeton WordNet. A bayesian ridge classifier is trained on the entropy to determine the 1/0 label of the target word.
+System 2 Name: Entroplexity
+Description: We define sentence perplexity as the language model score of the context sentence given a Knser-Ney smoothed language model. Using the perplexity score and the entropy features in system 1, we train a bayesian ridge classifier to determine the 1/0 label of the target word.

@@ -1,0 +1,6 @@
+system description :
+AmritaCEN_w2vecSim :
+In this method we used SVM classifier for tagging 1 or 0 .
+For training the svm we took Word2vec features and similarity between the words as a features and other features like length, position ,ambiguity and syllabus as features and trained the svm model.
+AmritaCEN_w2vecSimPos :
+we included all the features mentioned above and POS tagger then trained in SVM.
