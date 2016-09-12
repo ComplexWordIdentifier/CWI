@@ -1,0 +1,46 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Input Space</title>
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+    <body background="http://cdn.wallpapersafari.com/29/50/s5uaze.jpg">
+
+    <h1 style="color:white; font:Comic Sans; text-align: center; margin-left:90px;">Greetings.</h1>
+        <h3 style="color:white; font:Comic Sans; margin: 20px;font-size: 1.5em; padding: 40px;" >Place Your Input File Here! :)</h3>
+        <div class="container" class="img-rounded" alt="Cinque Terre" style="background-image: url('http://cdn.mhpbooks.com/uploads/2015/06/books.jpg');">
+
+        </div>
+        <div class="form-group">
+        <label for="exampleInputEmail1">InputFile</label>
+      <form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data">
+         <!--<input type = "file" name = "file" class="btn btn-info" />-->
+         <label class="btn btn-default btn-file">
+     <input type="file"  name="file">
+        </label>
+          <input type="submit" class="btn btn-info" value="Submit Button">
+
+          <!--<button type="button" class="btn btn-primary">Submit</button>-->
+         <!--<input type = "submit"/>-->
+      </form>
+
+       </div>
+    </body>
+   <!--<button type="button" class="close" data-dismiss="modal">Submit</button>-->
+          <!--<h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span>-->
+
+   </body>
+
+<!--<form action = "http://localhost:5000/uploader" method = "POST"-->
+         <!--enctype = "multipart/form-data">-->
+         <!--<input type = "file" name = "file" />-->
+         <!--<input type = "submit"/>-->
+      <!--</form>-->
+
+
+</html>

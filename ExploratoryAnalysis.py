@@ -94,12 +94,17 @@ for i in range(len(allwords)):
         y[i]=0
 # print y
 fdist=FreqDist(brown.words())
-
+freqComplex=[]
+freqSimple=[]
 x=[]
 for i in range(len(allwords)):
     x.append([])
 for i in range(len(allwords)):
     x[i].append(fdist.freq(allwords[i]))
+    if (y[i]==1):
+        freqComplex.append(fdist.freq(allwords[i]))
+    else:
+        freqSimple.append(fdist.freq(allwords[i]))
     x[i].append(len(allwords[i]))
     x[i].append(synobj.synCount(allwords[i]))
     x[i].append(synobj.len_of_synonyms(allwords[i]))
@@ -137,10 +142,7 @@ word_weights_simple=np.array(word_weights_simple)
 word_weights_complex=np.array(word_weights_complex)
 print word_weights_complex,word_weights_complex.mean(),word_weights_complex.std()
 print word_weights_simple,word_weights_simple.mean(),word_weights_simple.std()
-pl.boxplot(word_weights_simple)
-pl.show()
-pl.boxplot(word_weights_complex)
-pl.show()
+
 
 for i in range(len(allwords)):
     count_vowels=0
@@ -160,10 +162,14 @@ for i in range(len(allwords)):
     print allwords[i],count_vowels
 complex_vowels=np.array(complex_vowels)
 simple_vowels=np.array(simple_vowels)
-pl.boxplot(complex_vowels)
-pl.show()
-pl.boxplot(simple_vowels)
-pl.show()
+
 print complex_vowels,'mean:',complex_vowels.mean(),'std:',complex_vowels.std()
+fig, axes = pl.subplots(nrows=1, ncols=2)
+axes[0, 0].boxplot(freqSimple, labels=['brown freq simple words '],showmeans=True)
+axes[0, 1].boxplot(freqComplex[0:250], labels=['brown freq complex words'],showmeans=True)
+# axes[1, 0].boxplot(word_weights_simple, labels=['word weight simple'],showmeans=True)
+# axes[1, 1].boxplot(word_weights_complex, labels=['word weight complex'],showmeans=True)
+
+pl.show()
 
 # print simple_vowels,'mean:',simple_vowels.mean(),'std:',simple_vowels.std()

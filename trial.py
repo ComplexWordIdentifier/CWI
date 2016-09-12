@@ -18,8 +18,9 @@ from nltk import FreqDist
 from nltk.corpus import brown
 from synonymcount import synonymcount
 from utilities import vowelCount,wordweight
-from shitty import y as ytest
-from shitty import x as xtest
+# from shitty import y as ytest
+# from shitty import x as xtest
+from shitty2 import XTest,TestAllWords
 synobj=synonymcount()
 
 vc=vowelCount()
@@ -29,6 +30,7 @@ import re
 import nltk
 dataval=[]
 data=open("C:\Users\Krishna\Desktop\SemEval\cwi\cwi_training_allannotations.txt",'r')
+"""2000 length"""
 for i in range ((2000)):
     dataval= [np.append((dataval),[data.readline()])]
 dataval=np.array(dataval)
@@ -61,9 +63,11 @@ for i in range(len(rhs)):
         for j in range(len(k)):
             if j>1:
                if(k[j] =='1' or k[j] =='1\n'):
-                   count=1
-
-    complexity.update({k[0].lower():count})
+                   count+=1
+    if count > 0:
+        complexity.update({k[0].lower():1})
+    else:
+            complexity.update({k[0].lower():0})
 # print complexity['compounds']
 
 pat = r'''\ '''
@@ -112,15 +116,20 @@ for i in range(len(allwords)):
     x[i].append(ww.wdweight(allwords[i]))
     x[i].append(vc.vCount(allwords[i]))
     x[i].append(synobj.len_of_synonyms(allwords[i]))
-classifier=DecisionTreeClassifier(criterion='gini')
-classify=classifier.fit((x[0:int(len(x)*0.8)]),y[0:int (len(y)*.8)])
-ypred=classifier.predict(xtest)
-# print y[0:int (len(y)*.5)]
-print ypred
-# target_names=['1','2','3','4','5']
-target_names=['0','1']
-print(classification_report(ytest, ypred, target_names=target_names))
 
+classifier=DecisionTreeClassifier()
+classify=classifier.fit((x[0:int(len(x)*0.8)]),y[0:int (len(y)*.8)])
+ypred=classifier.predict(XTest)
+# print y[0:int (len(y)*.5)]
+
+for i in range (len(ypred)):
+    if ypred[i]==1:
+        print TestAllWords[i], '-',ypred[i]
+
+# target_names=['1','2','3','4','5']
+# target_names=['0','1']
+# print(classification_report(ytest, ypred, target_names=target_names))
+#
 
 
 

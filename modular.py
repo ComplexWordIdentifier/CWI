@@ -23,7 +23,7 @@ vc=vowelCount()
 ww=wordweight()
 
 import nltk
-size=5000
+size=2000
 # class datacleaning:
 
 def readfile(filename):
@@ -32,7 +32,7 @@ def readfile(filename):
     for i in range ((size)):
         dataval= [np.append((dataval),[data.readline()])]
     dataval=np.array(dataval)
-    data2=[re.split(" [.!?]['\t']",dataval[0][i],maxsplit=1)for i in range((5000))]
+    data2=[re.split(" [.!?]['\t']",dataval[0][i],maxsplit=1)for i in range((2000))]
     return data2
 
 # getting LHS and RHS data
